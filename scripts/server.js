@@ -32,7 +32,7 @@ try {
 	if (coffee != 'false') {
 		require('coffee-script')
 	} 
-	require(__dirname + '/app/'+ inifFile);
+	require(__dirname + '/app/'+ iniFile);
 } catch (excp) {
 	console.error(' [*] ', new Date(), ' -', iniFile, ' don\'t exists' );
 	console.warn(' [*] ', 'Dieing...');
