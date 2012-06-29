@@ -1,6 +1,7 @@
 #!/bin/bash
 # script to create git repo for node subdomain
 # _rev is passed into the script as a parameter
+#
 
 BASEDIR=${1};
 APPDIR=${2};
@@ -12,7 +13,7 @@ GIT_UID=${7};
 APPS_DIR=${8};
 
 GIT_DIR=${APPDIR}/${APPUSERNAME}/${REV}.git
-APP_DIR=${APPS_DIR}/${APPUSERNAME}/${REV}
+APP_DIR=${APPS_DIR}/${APPUSERNAME}/${REV}/app/
 
 if [ ! -d "${APPDIR}" ]; then
   mkdir -p ${APPDIR};
