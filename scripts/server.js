@@ -20,7 +20,7 @@ console.log(' [*] ', 'Running node-'+ process.version);
 console.log(' [*] ', 'Server now listening on internal port', process.env['app_port'] || 80);
 console.log(' [*] ', 'Public Address:', "{{ADDRESS}}")
 
-var pidRunner = path.join(__dirname,'.nodester','runner.pid')
+var pidRunner = path.join(__dirname,'app.pid')
 try {
 	fs.writeFileSync(pidRunner, process.pid, 'utf8');
 	console.log(' [*] ',' Process pid: ', process.pid );
