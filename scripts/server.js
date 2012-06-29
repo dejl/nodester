@@ -5,7 +5,6 @@
 // GNU Affero General Public License 
 //
 
-require.paths.unshift('/usr/lib/node_modules');
 
 var fs = require('fs')
   , path = require('path')
