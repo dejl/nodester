@@ -27,7 +27,6 @@ var node_versions = require('../lib/lib').node_versions()
 
 oldmask = process.umask(newmask);
 
-console.log('Changed umask from: ' + oldmask.toString(8) + ' to ' + newmask.toString(8));
 
 var run_max = 5;
 var run_count = 0;
