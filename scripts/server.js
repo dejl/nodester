@@ -23,7 +23,7 @@ console.log(' [*] ', 'Public Address:', "{{ADDRESS}}")
 
 var pidRunner = path.join(__dirname,'.nodester','runner.pid')
 try {
-	fs.writeFileSync(pidRunner,process.pid,'utf8');
+	fs.writeFileSync(pidRunner, process.pid, 'utf8');
 	console.log(' [*] ',' Process pid: ', process.pid );
 } catch (excp) {
 	console.log(' [*] ', 'Opps... Couldn\'t write my pid to fs (' + process.pid + ')');

@@ -86,6 +86,7 @@ return !function () {
         var nodeVersion ='/usr/local/n/versions/' + version + '/bin/node';
         // export HOME="{{HOME}}"
         // exec {{ENV}} {{VERSION}} {{PATH}}/server.js >> {{PATH}}/logs/app.log
+        // Yeah on every start because user can switch versions and stuff
         upstartScript = upstartScript.replace(/\{\{FILE\}\}/, plainObj(env))
                                      .replace(/\{\{HOME\}\}/, home)
                                      .replace(/\{\{VERSION\}\}/, nodeVersion)
