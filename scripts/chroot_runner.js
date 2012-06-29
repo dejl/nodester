@@ -90,7 +90,8 @@ return !function () {
         upstartScript = upstartScript.replace(/\{\{FILE\}\}/, plainObj(env))
                                      .replace(/\{\{HOME\}\}/, home)
                                      .replace(/\{\{VERSION\}\}/, nodeVersion)
-                                     .replace(/\{\{PATH\}\}/g, home);
+                                     .replace(/\{\{PATH\}\}/g, home)
+                                     .replace(/\{\{ENV\}\}/g, plainObj(env));
 
         fs.writeFileSync(home + '/server.js', serverScript, 'utf8');
         fs.writeFileSync('/etc/init/'+ config.name + '.conf', upstartScript);
