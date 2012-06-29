@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 /*jshint node:true, noempty:true, laxcomma:true, laxbreak:false */
 "use strict";
-require.paths.unshift('/usr/lib/node_modules');
 
 // Run as sudoer
 
