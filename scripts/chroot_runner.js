@@ -52,8 +52,8 @@ env.app_host = config.ip;
 
 
 return !function () {
-  var upstartScript = fs.readFileSync('./default_upstart.conf','utf8')
-    , serverScript = fs.readFileSync('./server.js','utf8')
+  var upstartScript = fs.readFileSync(__dirname + '/default_upstart.conf','utf8')
+    , serverScript = fs.readFileSync(__dirname + '/server.js','utf8')
     , pack = fs.readFileSync(home + '/package.json')
     , coffee = false;
 
@@ -79,7 +79,7 @@ return !function () {
   // Insert node-watcher code and link the dependency
   if (node_versions.indexOf(version) !== -1) {
     exec('which n', function (err, std){
-      if (!err) {
+      if (err) {
         console.warn('n is not instaleld');
       } else {
         var nodeVersion ='/usr/local/n/versions/' + version + '/bin/node';
