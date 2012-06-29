@@ -25,7 +25,7 @@ gitdir=${gitdirsuffix%.git}
 GITBASELEN=${#GITBASE};
 OLD_PWDLEN=${#OLD_PWD};
 MY_LEN=$(( ${OLD_PWDLEN} - ${GITBASELEN} - 4 ));
-appdir="${APPSBASE}${OLD_PWD:${GITBASELEN}:${MY_LEN}}";
+appdir="${APPSBASE}${OLD_PWD:${GITBASELEN}:${MY_LEN}}/app/";
 
 if [ -d "${appdir}" ]; then
   echo "Syncing repo with chroot"

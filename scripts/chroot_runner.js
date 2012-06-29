@@ -101,7 +101,7 @@ return !function () {
           coffee ? npmVersion + ' install coffee-script': 'echo hi',
           "sudo stop " + config.name,
           "sudo start " + config.name
-        ].join(' && ');
+        ].join('; ');
 
         exec(commands, function (error, stdout) {
             if (error) {
