@@ -83,6 +83,7 @@ return !function () {
         console.warn('n is not instaleld');
       } else {
         var nodeVersion ='/usr/local/n/versions/' + version + '/bin/node';
+        var npmVersion = '/usr/local/n/versions/' + versions + '/bin/npm'
         // export HOME="{{HOME}}"
         // exec {{ENV}} {{VERSION}} {{PATH}}/server.js >> {{PATH}}/logs/app.log
         // Yeah on every start because user can switch versions and stuff
@@ -96,8 +97,8 @@ return !function () {
 
         var commands = [
           "cd " + home,
-          std + " npm " + version + " install",
-          coffee ? std + ' npm ' + version + ' install coffee-script': 'echo hi',
+          npmVersion + " install",
+          coffee ? npmVersion + ' install coffee-script': 'echo hi',
           "sudo stop " + config.name,
           "sudo start " + config.name
         ].join(' && ');
